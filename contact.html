@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | The Learning Corner</title>
+
+  <style>
+    :root {
+      --dark-green: #426b3a;
+      --green: #6FAF4F;
+      --orange: #D97A2B;
+      --light-orange: #f3b37a;
+      --cream: #f8f4ea;
+      --soft-bg: #f3efe4;
+      --text: #2f2a24;
+      --white: #ffffff;
+      --muted: #666;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--cream);
+      color: var(--text);
+    }
+
+    header {
+      background-color: var(--white);
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-box img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .logo-text h2 {
+      font-size: 20px;
+      color: var(--dark-green);
+    }
+
+    .logo-text p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      margin-left: 25px;
+      font-weight: 600;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--orange);
+    }
+
+    .hero {
+      padding: 60px 50px 30px;
+      background: linear-gradient(to right, var(--cream), var(--soft-bg));
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 12px;
+      color: var(--dark-green);
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 700px;
+    }
+
+    .contact-section {
+      padding: 40px 50px 60px;
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .contact-info {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .contact-info h2 {
+      color: var(--dark-green);
+      margin-bottom: 15px;
+    }
+
+    .contact-info p {
+      margin-bottom: 10px;
+      color: var(--muted);
+    }
+
+    .form-box {
+      flex: 1;
+      min-width: 300px;
+      background: var(--white);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    }
+
+    .form-box h2 {
+      margin-bottom: 20px;
+      color: var(--dark-green);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--orange);
+    }
+
+    button {
+      background: linear-gradient(135deg, var(--dark-green), var(--green));
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, var(--orange), var(--light-orange));
+    }
+
+    footer {
+      background-color: var(--white);
+      text-align: center;
+      padding: 20px;
+      color: var(--muted);
+      border-top: 1px solid #eee;
+    }
+
+    @media (max-width: 768px) {
+      header,
+      .hero,
+      .contact-section {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 18px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-box">
+      <img src="logo.png" alt="The Learning Corner Logo">
+      <div class="logo-text">
+        <h2>The Learning Corner</h2>
+        <p>with Miss L</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="notes.html">Notes</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="tests.html">Tests</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Contact</h1>
+    <p>If you have questions, need help, or want to connect, feel free to reach out.</p>
+  </section>
+
+  <section class="contact-section">
+
+    <div class="contact-info">
+      <h2>Get in touch</h2>
+      <p>Email: missl@email.com</p>
+      <p>WhatsApp: 000 000 0000</p>
+      <p>Available for support and learning guidance.</p>
+    </div>
+
+    <div class="form-box">
+      <h2>Send a message</h2>
+
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+    </div>
+
+  </section>
+
+  <footer>
+    <p>The Learning Corner with Miss L • A Cozy Space to Learn and Grow</p>
+  </footer>
+
+</body>
+</html>

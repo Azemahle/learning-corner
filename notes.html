@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes & PDFs | The Learning Corner</title>
+  <style>
+    :root {
+      --dark-green: #426b3a;
+      --green: #6FAF4F;
+      --orange: #D97A2B;
+      --light-orange: #f3b37a;
+      --cream: #f8f4ea;
+      --soft-bg: #f3efe4;
+      --text: #2f2a24;
+      --white: #ffffff;
+      --muted: #666;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--cream);
+      color: var(--text);
+    }
+
+    header {
+      background-color: var(--white);
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-box img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .logo-text h2 {
+      font-size: 20px;
+      color: var(--dark-green);
+    }
+
+    .logo-text p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      margin-left: 25px;
+      font-weight: 600;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--orange);
+    }
+
+    .hero {
+      padding: 60px 50px 30px;
+      background: linear-gradient(to right, var(--cream), var(--soft-bg));
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 12px;
+      color: var(--dark-green);
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 700px;
+    }
+
+    .filters {
+      padding: 30px 50px 10px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background-color: var(--white);
+      color: var(--dark-green);
+      border: 1px solid #e7e0d6;
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background-color: var(--orange);
+      color: white;
+      border-color: var(--orange);
+    }
+
+    .notes-section {
+      padding: 30px 50px 60px;
+    }
+
+    .notes-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .note-card {
+      background-color: var(--white);
+      width: 280px;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+      transition: 0.3s;
+      border: 1px solid transparent;
+    }
+
+    .note-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--light-orange);
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #eef6e8;
+      color: var(--dark-green);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 14px;
+    }
+
+    .note-card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: var(--dark-green);
+    }
+
+    .note-card p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+
+    .card-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 11px 18px;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+
+    .btn-download {
+      background: linear-gradient(135deg, var(--dark-green), var(--green));
+      color: white;
+    }
+
+    .btn-download:hover {
+      background: linear-gradient(135deg, var(--orange), var(--light-orange));
+    }
+
+    .btn-view {
+      background-color: #fff4ea;
+      color: var(--orange);
+    }
+
+    .btn-view:hover {
+      background-color: var(--orange);
+      color: white;
+    }
+
+    footer {
+      background-color: var(--white);
+      text-align: center;
+      padding: 20px;
+      color: var(--muted);
+      border-top: 1px solid #eee;
+    }
+
+    @media (max-width: 768px) {
+      header,
+      .hero,
+      .filters,
+      .notes-section {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 18px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .note-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-box">
+      <img src="logo.png" alt="The Learning Corner Logo">
+      <div class="logo-text">
+        <h2>The Learning Corner</h2>
+        <p>with Miss L</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="notes.html" class="active">Notes</a>
+      <a href="#">Quizzes</a>
+      <a href="#">Tests</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Notes & PDFs</h1>
+    <p>Browse class notes, worksheets, summaries, and downloadable study resources in one neat place.</p>
+  </section>
+
+  <section class="filters">
+    <button class="filter-btn active">All</button>
+    <button class="filter-btn">Mathematics</button>
+    <button class="filter-btn">English</button>
+    <button class="filter-btn">Natural Science</button>
+    <button class="filter-btn">Grade 4</button>
+    <button class="filter-btn">Grade 5</button>
+  </section>
+
+  <section class="notes-section">
+    <div class="notes-grid">
+
+      <div class="note-card">
+        <span class="tag">Mathematics • Grade 5</span>
+        <h3>Fractions Notes</h3>
+        <p>A simple guide to understanding fractions, equivalent fractions, and comparing values.</p>
+        <div class="card-buttons">
+          <a href="fractions-notes.pdf" class="btn btn-download" download>Download PDF</a>
+          <a href="fractions-notes.pdf" class="btn btn-view" target="_blank">View</a>
+        </div>
+      </div>
+
+      <div class="note-card">
+        <span class="tag">English • Grade 4</span>
+        <h3>Parts of Speech</h3>
+        <p>Clear notes on nouns, verbs, adjectives, and adverbs with simple examples.</p>
+        <div class="card-buttons">
+          <a href="parts-of-speech.pdf" class="btn btn-download" download>Download PDF</a>
+          <a href="parts-of-speech.pdf" class="btn btn-view" target="_blank">View</a>
+        </div>
+      </div>
+
+      <div class="note-card">
+        <span class="tag">Natural Science • Grade 5</span>
+        <h3>Plants and Growth</h3>
+        <p>Learn the parts of a plant, what plants need, and how growth happens step by step.</p>
+        <div class="card-buttons">
+          <a href="plants-and-growth.pdf" class="btn btn-download" download>Download PDF</a>
+          <a href="plants-and-growth.pdf" class="btn btn-view" target="_blank">View</a>
+        </div>
+      </div>
+
+      <div class="note-card">
+        <span class="tag">Mathematics • Grade 4</span>
+        <h3>Place Value</h3>
+        <p>Practice reading, writing, and understanding place value with easy explanations.</p>
+        <div class="card-buttons">
+          <a href="place-value.pdf" class="btn btn-download" download>Download PDF</a>
+          <a href="place-value.pdf" class="btn btn-view" target="_blank">View</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>The Learning Corner with Miss L • A Cozy Space to Learn and Grow</p>
+  </footer>
+
+</body>
+</html>

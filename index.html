@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Learning Corner</title>
+  <style>
+    :root {
+      --dark-green: #426b3a;
+      --green: #6FAF4F;
+      --orange: #D97A2B;
+      --cream: #f8f4ea;
+      --text: #2f2a24;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--cream);
+      color: var(--text);
+    }
+
+    header {
+      background-color: var(--white);
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-box img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .logo-text h2 {
+      font-size: 20px;
+      color: var(--dark-green);
+    }
+
+    .logo-text p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      margin-left: 25px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--dark-green);
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 50px;
+      gap: 40px;
+    }
+
+    .hero-text {
+      max-width: 520px;
+    }
+
+    .hero-text h1 {
+      font-size: 54px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero-text .green {
+      color: var(--dark-green);
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      color: #5f5f5f;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--dark-green);
+      color: white;
+      padding: 14px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: var(--green);
+    }
+
+    .hero-image img {
+      width: 340px;
+      max-width: 100%;
+      border-radius: 20px;
+    }
+
+    .features {
+      padding: 20px 50px 60px;
+    }
+
+    .features h2 {
+      font-size: 36px;
+      margin-bottom: 25px;
+      color: var(--dark-green);
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: var(--white);
+      border-radius: 18px;
+      padding: 25px;
+      width: 220px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .card h3 {
+      color: var(--dark-green);
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-box">
+      <img src="logo.png" alt="The Learning Corner Logo">
+      <div class="logo-text">
+        <h2>The Learning Corner</h2>
+        <p>with Miss L</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Resources</a>
+      <a href="#">Subjects</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>A cozy place for <span class="green">learning</span></h1>
+      <p>Lessons, notes, quizzes, and practice tests in one simple and beautiful space.</p>
+      <a href="#" class="btn">Start Learning</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="logo.png" alt="Learning Corner Logo">
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Resources</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Lessons</h3>
+        <p>Watch educational videos and follow along with easy school lessons.</p>
+      </div>
+
+      <div class="card">
+        <h3>Notes</h3>
+        <p>Download helpful PDFs, worksheets, and clear study notes.</p>
+      </div>
+
+      <div class="card">
+        <h3>Quizzes</h3>
+        <p>Practise with short quizzes that can be marked instantly.</p>
+      </div>
+
+      <div class="card">
+        <h3>Tests</h3>
+        <p>Revise with tests, memos, and explanations for better understanding.</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
